@@ -1,6 +1,7 @@
 import { ExpireQuotes, randomTaoQuote } from "./modules/taoStatue";
-import { SwimPath, UpdateSpeed, RotateSystem } from "./modules/fish";
+import { SwimPath, UpdateSpeed, RotateSystem, RotateData } from "./modules/fish";
 import { AlternatingNotes, playNote, sourceAHigh, sourceALow, sourceEHigh, sourceGLow, sourceCHigh, sourceCLow } from "./modules/musicalTree";
+import { SpookDeer, DeerWalkAround, DeerRotateSystem, DeerWalk, Behavior } from "./modules/deer";
 
 
 
@@ -129,6 +130,36 @@ fruit3.add(new OnClick(e => {
 engine.addEntity(fruit3)
 
 
+// Deer
+
+
+// Add deer
+let Deer = new Entity()
+Deer.set(new Transform({
+  position: new Vector3(5, 0, 5)
+}))
+Deer.get(Transform)
+Deer.set(new GLTFShape("models/Deer.gltf"))
+Deer.add(new RotateData())
+// add a path data component
+Deer.set(new DeerWalk())
+Deer.add(new Animator())
+Deer.add(new Behavior())
+let deerWalk = new AnimationClip("Walk")
+Deer.get(Animator).addClip(deerWalk)
+let deerIdle = new AnimationClip("Idle")
+Deer.get(Animator).addClip(deerIdle)
+let deerRun = new AnimationClip("Run")
+Deer.get(Animator).addClip(deerRun)
+let deerEat = new AnimationClip("Eat")
+Deer.get(Animator).addClip(deerEat)
+let deerLook = new AnimationClip("Look")
+deerLook.looping = false
+Deer.get(Animator).addClip(deerLook)
+//deerWalk.play()
+// Add to engine
+engine.addEntity(Deer)
+
 
 // let wumpusAnim = new AnimationClip("")
 // wumpus.add(new Animator(wumpusAnim))
@@ -140,6 +171,13 @@ engine.addSystem(new ExpireQuotes())
 engine.addSystem(new SwimPath(), 2)
 engine.addSystem(new UpdateSpeed(), 1)
 engine.addSystem(new RotateSystem(), 3)
+
+
+// Deer
+engine.addSystem(new SpookDeer())
+engine.addSystem(new DeerRotateSystem(), 3)
+engine.addSystem(new DeerWalkAround())
+
 
 
 // button down event
