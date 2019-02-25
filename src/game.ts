@@ -81,20 +81,22 @@ waterClip.play
 
 // Musical tree
 
+//  (0, 0) = (-71, 52) tree = (-64, 60)
 let musicalTree = new Entity()
 musicalTree.add(new Transform({
-  position: new Vector3(0.3, 2.3, 0.2)
+  position: new Vector3(((71-64)*16), 25, ((61-52)*16)+ 8)
 }))
+//musicalTree.add(new BoxShape())
 engine.addEntity(musicalTree)
 
 let fruit1 = new Entity()
 fruit1.setParent(musicalTree)
 fruit1.add(new Transform({
-  position: new Vector3(0.3, 2.3, 0.2),
-  scale: new Vector3(0.3, 0.3, 0.3)
+  position: new Vector3(-2, 7, -3),
+  scale: new Vector3(10, 10, 10)
 }))
 fruit1.add(new AlternatingNotes([sourceAHigh, sourceALow]))
-fruit1.add(new GLTFShape("models/2.glb"))
+fruit1.add(new GLTFShape("models/Apple.glb"))
 fruit1.add(new OnClick(e => {
   log("fuit1 ")
   playNote(fruit1)
@@ -104,11 +106,11 @@ engine.addEntity(fruit1)
 let fruit2 = new Entity()
 fruit2.setParent(musicalTree)
 fruit2.add(new Transform({
-  position: new Vector3(-1.2, 2, -0.2),
-  scale: new Vector3(0.3, 0.3, 0.3)
+  position: new Vector3(-1.2, 9, -0.2),
+  scale: new Vector3(10, 10, 10)
 }))
 fruit2.add(new AlternatingNotes([sourceEHigh, sourceGLow]))
-fruit2.add(new GLTFShape("models/2.glb"))
+fruit2.add(new GLTFShape("models/Apple.glb"))
 fruit2.add(new OnClick(e => {
   log("fuit2")
   playNote(fruit2)
@@ -118,11 +120,11 @@ engine.addEntity(fruit2)
 let fruit3 = new Entity()
 fruit3.setParent(musicalTree)
 fruit3.add(new Transform({
-  position: new Vector3(0, 1.7, 1),
-  scale: new Vector3(0.3, 0.3, 0.3)
+  position: new Vector3(5, 7, -15),
+  scale: new Vector3(10, 10, 10)
 }))
 fruit3.add(new AlternatingNotes([sourceCHigh, sourceCLow]))
-fruit3.add(new GLTFShape("models/2.glb"))
+fruit3.add(new GLTFShape("models/Apple.glb"))
 fruit3.add(new OnClick(e => {
   log("fuit3")
   playNote(fruit3)
@@ -187,6 +189,10 @@ input.subscribe("BUTTON_A_DOWN", e => {
       log("tao quote")
       randomTaoQuote()
     }  
+  if (e.hit.meshName == "SecondaryTreeLights"){
+      log("play note")
+      playNote(fruit1)
+    }      
 })
 
 
