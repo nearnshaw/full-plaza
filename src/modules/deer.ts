@@ -8,11 +8,13 @@ const runAwayDistance = 5
 // how many points on the curve
 let curvePoints = 10
 
+
 // Points in path
-const point1 = new Vector3(8, 0, 8)
-const point2 = new Vector3(8, 0, 22)
-const point3 = new Vector3(22, 0, 22)
-const point4 = new Vector3(22, 0, 8)
+//  (0, 0) = (-71, 52) first location = (-66, 61)
+const point1 =   new Vector3(((71-66)*16) + 3, 9, ((61-52)*16)+ 15) //new Vector3(8, 0, 8)
+const point2 = new Vector3(((71-65)*16), 10, ((65-52)*16))
+const point3 = new Vector3(((71-62)*16) + 3, 18, ((66-52)*16)+ 15)
+const point4 = new Vector3(((71-58)*16) + 3, 16, ((65-52)*16)+ 15)
 
 // Hang out points
 const op1 = new Vector3(-4, 0, -4)
@@ -73,7 +75,7 @@ export class Behavior {
 
 // Custom component to store rotational lerp data
 @Component("rotateData")
-export class RotateData {
+export class DeerRotateData {
   originRot: Quaternion = Quaternion.Euler(0,0,0)
   targetRot: Quaternion = Quaternion.Euler(0,0,0)
   fraction: number = 0
@@ -149,7 +151,7 @@ export class DeerRotateSystem {
     for (let deer of deers.entities){
       let transform = deer.get(Transform)
       let path = deer.get(DeerWalk)
-      let rotate = deer.get(RotateData)
+      let rotate = deer.get(DeerRotateData)
       let behavior = deer.get(Behavior)
       if( behavior.state === State.Walk || behavior.state === State.Run){
         rotate.fraction += dt/2
@@ -221,7 +223,7 @@ export class SpookDeer {
           walk.target = walk.localPath[1]
           //walk.target = walk.mainPath[walk.mainPathIndex]
           // stop previous rotating
-          deer.get(RotateData).fraction = 1
+          deer.get(DeerRotateData).fraction = 1
         }
        } 
     }

@@ -1,7 +1,7 @@
 import { ExpireQuotes, randomTaoQuote } from "./modules/taoStatue";
 import { SwimPath, UpdateSpeed, RotateSystem, RotateData } from "./modules/fish";
 import { AlternatingNotes, playNote, sourceAHigh, sourceALow, sourceEHigh, sourceGLow, sourceCHigh, sourceCLow } from "./modules/musicalTree";
-import { SpookDeer, DeerWalkAround, DeerRotateSystem, DeerWalk, Behavior } from "./modules/deer";
+import { SpookDeer, DeerWalkAround, DeerRotateSystem, DeerWalk, Behavior, DeerRotateData } from "./modules/deer";
 
 
 
@@ -140,7 +140,7 @@ Deer.set(new Transform({
 }))
 Deer.get(Transform)
 Deer.set(new GLTFShape("models/Deer.gltf"))
-Deer.add(new RotateData())
+Deer.add(new DeerRotateData())
 // add a path data component
 Deer.set(new DeerWalk())
 Deer.add(new Animator())
