@@ -1,0 +1,222 @@
+{
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5125,
+            "count" : 131973,
+            "max" : [
+                115442
+            ],
+            "min" : [
+                0
+            ],
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 115443,
+            "max" : [
+                96.71321105957031,
+                25.240795135498047,
+                97.24526977539062
+            ],
+            "min" : [
+                -97.60741424560547,
+                -0.04355812072753906,
+                -97.39632415771484
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 115443,
+            "max" : [
+                0.9997960329055786,
+                0.9999986886978149,
+                0.9998751878738403
+            ],
+            "min" : [
+                -0.9999383091926575,
+                -1.0,
+                -0.9996317625045776
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 115443,
+            "max" : [
+                0.7069606781005859,
+                0.8686254620552063
+            ],
+            "min" : [
+                0.008100643754005432,
+                0.016845345497131348
+            ],
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5123,
+            "count" : 115443,
+            "max" : [
+                0,
+                0,
+                0,
+                0
+            ],
+            "min" : [
+                0,
+                0,
+                0,
+                0
+            ],
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 115443,
+            "max" : [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "min" : [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "type" : "VEC4"
+        }
+    ],
+    "asset" : {
+        "generator" : "Khronos Blender glTF 2.0 exporter",
+        "version" : "2.0"
+    },
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 527892,
+            "byteOffset" : 0,
+            "target" : 34963
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1385316,
+            "byteOffset" : 527892,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1385316,
+            "byteOffset" : 1913208,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 923544,
+            "byteOffset" : 3298524,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 923544,
+            "byteOffset" : 4222068,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1847088,
+            "byteOffset" : 5145612,
+            "target" : 34962
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 6992700,
+            "uri" : "Grass.bin"
+        }
+    ],
+    "images" : [
+        {
+            "name" : "ColorAtlas",
+            "uri" : "ColorAtlas.png"
+        },
+        {
+            "name" : "Emmisive",
+            "uri" : "Emmisive.jpg"
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "emissiveFactor" : [
+                0.10724328458309174,
+                0.10724328458309174,
+                0.10724328458309174
+            ],
+            "emissiveTexture" : {
+                "index" : 1
+            },
+            "name" : "ColorAtlas",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0
+                },
+                "metallicFactor" : 0.0
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "SmallFlora",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "JOINTS_0" : 4,
+                        "NORMAL" : 2,
+                        "POSITION" : 1,
+                        "TEXCOORD_0" : 3,
+                        "WEIGHTS_0" : 5
+                    },
+                    "indices" : 0,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "SmallFlora"
+        }
+    ],
+    "samplers" : [
+        {}
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        },
+        {
+            "sampler" : 0,
+            "source" : 1
+        }
+    ]
+}

@@ -1,0 +1,118 @@
+{
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5123,
+            "count" : 16635,
+            "max" : [
+                10830
+            ],
+            "min" : [
+                0
+            ],
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 10831,
+            "max" : [
+                103.00187683105469,
+                27.385915756225586,
+                83.28084564208984
+            ],
+            "min" : [
+                -100.37528991699219,
+                -15.296598434448242,
+                -120.09629821777344
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 10831,
+            "max" : [
+                0.9999760389328003,
+                1.0,
+                0.9999996423721313
+            ],
+            "min" : [
+                -0.9999693632125854,
+                -1.0,
+                -0.9999998807907104
+            ],
+            "type" : "VEC3"
+        }
+    ],
+    "asset" : {
+        "generator" : "Khronos Blender glTF 2.0 exporter",
+        "version" : "2.0"
+    },
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 33270,
+            "byteOffset" : 0,
+            "target" : 34963
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 129972,
+            "byteOffset" : 33272,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 129972,
+            "byteOffset" : 163244,
+            "target" : 34962
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 293216,
+            "uri" : "Colliders.bin"
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Terrain_collider",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 2,
+                        "POSITION" : 1
+                    },
+                    "indices" : 0
+                }
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Terrain_collider",
+            "rotation" : [
+                0.0,
+                -0.7131026387214661,
+                -0.0,
+                0.7010596394538879
+            ],
+            "translation" : [
+                -18.38267707824707,
+                7.92459774017334,
+                -1.6265983581542969
+            ]
+        }
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ]
+}

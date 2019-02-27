@@ -99,18 +99,18 @@ export class UpdateSpeed {
         //     depthDiff = 0.5
         //   }
 
-        let depthDiff = (angle / 15) + 2    // from - 30 to 30 -> 0 to 4
+        let depthDiff = (angle / 30) + 1.5    // from - 30 to 30 -> 0.5 to 2.5
 
 
         let clipSwim = shark.get(Animator).getClip("swim")
-        clipSwim.weight = (depthDiff/4) + 0.5   // 0.5 to 1.5
+        clipSwim.weight = (depthDiff/2)   // 0.25 to 1.25
 
         
         
-        clipSwim.speed = depthDiff + 0.5  //  0.5 to 4.5
+        clipSwim.speed = depthDiff + 0.5  //  1 to 3
 
 
-        speed.speed = ((depthDiff * -0.5) + 3) // from 1 to 3
+        speed.speed = ((depthDiff * -0.5) + 2) // from  0.75 to 1.75
         //log("dd :" , depthDiff, " speed: " , speed.speed)
     }
   }
