@@ -152,12 +152,12 @@ shark.add(new Transform({
   position: new Vector3((71-64)*16, 0, (58-51)*16),     //  (-64, 58)
   scale: new Vector3(0.5, 0.5, 0.5)
 }))
-shark.add(new GLTFShape("models/shark.gltf"))
+shark.add(new GLTFShape("models/Fish.gltf"))
 
 shark.add(new Animator())
 
 // Add animations
-const clipSwim3 = new AnimationClip("swim", {speed: 0.5, weight: 0.5})
+const clipSwim3 = new AnimationClip("Swim", {speed: 0.5, weight: 0.5})
 shark.get(Animator).addClip(clipSwim3)
 
 // Activate swim animation
